@@ -111,6 +111,61 @@ namespace YoungLearn.Utility
         }
 
         /// <summary>
+        /// 获得已完成名单
+        /// </summary>
+        /// <param name="user_name"></param>
+        /// <param name="table_name"></param>
+        public void GetGoodLearn(string user_name, string table_name)
+        {
+            Data = new DataTable();
+            SQLiteConnection conn = new SQLiteConnection("data source = " + sqlname);
+            conn.Open();
+            try
+            {
+                string query = "select " + table_name + ".姓名," + table_name + ".完成日期 from " + user_name + ", " + table_name + " where " + user_name + ".名称 = " + table_name + ".姓名";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
+                _ = da.Fill(Data);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        /// <summary>
+        /// 获得未完成名单
+        /// </summary>
+        /// <param name="user_name"></param>
+        /// <param name="table_name"></param>
+        public void GetBadLearn(string user_name, string table_name)
+        {
+            Data = new DataTable();
+            SQLiteConnection conn = new SQLiteConnection("data source = " + sqlname);
+            conn.Open();
+            try
+            {
+                string query = "select 名称 from (select * from " + user_name + " left join " + table_name + " on " + user_name + ".名称 = " + table_name + ".姓名) where 姓名 is NULL";
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                SQLiteDataAdapter da = new SQLiteDataAdapter(cmd);
+                Data.Clear();
+                _ = da.Fill(Data);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        /// <summary>
         /// DataTable导入数据库
         /// </summary>
         /// <param name="table_name"></param>

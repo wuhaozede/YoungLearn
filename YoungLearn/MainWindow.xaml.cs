@@ -124,7 +124,16 @@ namespace YoungLearn
                     sqlclass.ExitTable(name);
                 }
                 _ = sqlclass.Insert_table(name, data);
+
+                /*
+                 * 此处为图标初始化入口
+                 */
                 Initialization_pant(sqlclass, name);
+
+                /*
+                 * 此处为表格初始化入口
+                 */
+                Initialization_DataGrid(sqlclass, name);
             }
             else
             {
@@ -135,6 +144,10 @@ namespace YoungLearn
 
         private void Initialization_pant(SQLclass sqlclass, string table_name)
         {
+            /*
+             * 此处使用到了sql里面特殊方法GetNowData
+             * 建议重写该方法
+             */
             Dictionary<string,int> dic = sqlclass.GetNowData("user", table_name);
 
             chart.ChartAreas.Clear(); //图表区
@@ -147,13 +160,15 @@ namespace YoungLearn
             chart.ChartAreas["chartArea"].AxisX.IsMarginVisible = false;
             chart.ChartAreas["chartArea"].Area3DStyle.Enable3D = false;
             chart.Titles.Add("完成情况"); //标题
-            chart.Titles[0].Font = new Font("宋体", 10);
+            chart.Titles[0].Font = new Font("宋体", 18);
             chart.Series.Add("data");
             chart.Series["data"].ChartType = SeriesChartType.Doughnut;  //图标类型
             chart.Series["data"]["PieLabelStyle"] = "Outside";
             chart.Series["data"]["PieLineColor"] = "Black";
             chart.Legends.Add(new Legend("legend"));
             chart.Palette = ChartColorPalette.BrightPastel;
+            chart.ChartAreas[0].BackColor = System.Drawing.Color.WhiteSmoke;
+            
 
             foreach (KeyValuePair<string, int> item in dic)//注意类型是KeyValuePair
             {
@@ -169,8 +184,21 @@ namespace YoungLearn
                 DataPoint pointA = chart.Series["data"].Points[idxA];
                 pointA.Label = key;
                 pointA.LegendText = "#LABEL(#VAL) #PERCENT{P2}";
+                
             }
         }
+
+        private void Initialization_DataGrid(SQLclass sqlclass, string table_name)
+        {
+            sqlclass.GetGoodLearn("user", table_name);
+            DataView dv = new DataView(sqlclass.Data);
+            GoodLearnDataGrid.ItemsSource = dv;
+
+            sqlclass.GetBadLearn("user", table_name);
+            DataView dv_ = new DataView(sqlclass.Data);
+            BadLearnDataGrid.ItemsSource = dv_;
+        }
+
         private void btn_minimize_Click(object sender, RoutedEventArgs e)
         {
             WindowState = WindowState.Minimized;
