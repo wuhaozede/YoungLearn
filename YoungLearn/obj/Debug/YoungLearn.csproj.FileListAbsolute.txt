@@ -1,4 +1,3 @@
-C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\obj\Debug\YoungLearn.csproj.AssemblyReference.cache
 C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\obj\Debug\Initialization\Newyounglearn.baml
 C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\obj\Debug\MainWindow.baml
 C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\obj\Debug\StyleTemplet\ButtonStyle.baml
@@ -57,3 +56,6 @@ C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\obj\Debug\MessageWindows\Mes
 C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\obj\Debug\MessageWindows\MessageWindowYN.baml
 C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\obj\Debug\MessageWindows\MessageWindow.g.cs
 C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\obj\Debug\MessageWindows\MessageWindowYN.g.cs
+C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\bin\Debug\AutoUpdater.NET.dll
+C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\bin\Debug\AutoUpdater.NET.pdb
+C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\bin\Debug\AutoUpdater.NET.xml

@@ -21,6 +21,8 @@ using YoungLearn.Utility;
 using YoungLearn.MessageWindows;
 using System.Text.RegularExpressions;
 using System.Windows.Forms.DataVisualization.Charting;
+using AutoUpdaterDotNET;
+
 
 namespace YoungLearn
 {
@@ -33,6 +35,8 @@ namespace YoungLearn
         public User_initialization initialization = new User_initialization();
         public MainWindow()
         {
+            AutoUpdater.Start("http://miaochunhuaixia.top/YoungLearn/update.xml");
+
             InitializeComponent();
 
             if (!xmlclass.GetValue())
