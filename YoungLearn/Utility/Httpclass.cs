@@ -21,13 +21,14 @@ namespace YoungLearn.Utility
 
         public string GetHttpResponse(string url, int Timeout)
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
-            request.Method = "GET";
-            request.ContentType = "text/html;charset=UTF-8";
-            request.UserAgent = null;
-            request.Timeout = Timeout;
             try
             {
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                request.Method = "GET";
+                request.ContentType = "text/html;charset=UTF-8";
+                request.UserAgent = null;
+                request.Timeout = Timeout;
+            
                 Stream responseStream = ((HttpWebResponse)request.GetResponse()).GetResponseStream();
                 StreamReader reader = new StreamReader(responseStream, Encoding.GetEncoding("utf-8"));
                 string str = reader.ReadToEnd();
@@ -41,7 +42,6 @@ namespace YoungLearn.Utility
                 _ = message.ShowDialog();
                 System.Diagnostics.Process.GetCurrentProcess().Kill();
                 return null;
-                
             }
         }
 

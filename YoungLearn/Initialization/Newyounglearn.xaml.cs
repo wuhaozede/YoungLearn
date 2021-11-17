@@ -15,6 +15,8 @@ using System.Windows.Forms;
 using System.Windows.Forms.Integration;
 using System.Configuration;
 using YoungLearn.MessageWindows;
+using System.Data;
+using YoungLearn.Utility;
 
 namespace YoungLearn.Initialization
 {
@@ -96,6 +98,7 @@ namespace YoungLearn.Initialization
                 {
                     MessageWindow message = new MessageWindow(user_Initialization.Get_value("all"));
                     _ = message.ShowDialog();
+                    WriteSQL();
                     Close();
                 }
                 else
@@ -134,6 +137,47 @@ namespace YoungLearn.Initialization
                 Page1 p = new Page1();
                 _ = frmMain.Navigate(p);
                 Next_Button.Tag = "Page1";
+            }
+        }
+
+        private void WriteSQL()
+        {
+            string dbpath = AppDomain.CurrentDomain.BaseDirectory + "\\testDB.db";
+            SQLclass sqlclass = new SQLclass(dbpath);
+
+            DataTable dataTable = Excelclass.RenderDataTableFromExcel(user_Initialization.Excel_path, 0, 0);
+            if (int.Parse(user_Initialization.Get_value("num_list")) != -1)
+            {
+                List<string> l_name = new List<string> { "组织名称", "人数" };
+                List<string> l_type = new List<string> { "TEXT", "INT" };
+                _ = sqlclass.Create_table("user", l_name, l_type);
+                List<string> name_list = (from r in dataTable.AsEnumerable() select r.Field<string>(dataTable.Columns[user_Initialization.name_list].Caption)).ToList();
+                List<string> num_list = (from r in dataTable.AsEnumerable() select r.Field<string>(dataTable.Columns[user_Initialization.num_list].Caption)).ToList();
+
+                int x = user_Initialization.list_name ? 1 : 0;
+                List<List<string>> data = new List<List<string>> { };
+                for (; x < name_list.Count; x++)
+                {
+                    List<string> a = new List<string> { name_list[x], num_list[x] }; ;
+                    data.Add(a);
+                }
+                _ = sqlclass.Insert_table("user", l_name, data);
+            }
+            else
+            {
+                List<string> l_name = new List<string> { "名称" };
+                List<string> l_type = new List<string> { "TEXT" };
+                _ = sqlclass.Create_table("user", l_name, l_type);
+                List<string> name_list = (from r in dataTable.AsEnumerable() select r.Field<string>(dataTable.Columns[user_Initialization.name_list].Caption)).ToList();
+
+                int x = user_Initialization.list_name ? 1 : 0;
+                List<List<string>> data = new List<List<string>> { };
+                for (; x < name_list.Count; x++)
+                {
+                    List<string> a = new List<string> { name_list[x] }; ;
+                    data.Add(a);
+                }
+                _ = sqlclass.Insert_table("user", l_name, data);
             }
         }
     }

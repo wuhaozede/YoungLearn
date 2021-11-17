@@ -57,54 +57,11 @@ namespace YoungLearn
         private void Initialization_SQLite()
         {
             string dbpath = AppDomain.CurrentDomain.BaseDirectory + "\\testDB.db";
-            SQLclass sqlclass = new SQLclass(dbpath);
             if (!System.IO.File.Exists(dbpath))
             {
-                string excel_path = initialization.Excel_path;
-                if (System.IO.File.Exists(excel_path))
-                {
-                    DataTable dataTable = Excelclass.RenderDataTableFromExcel(excel_path, 0, 0);
-                    if (int.Parse(initialization.Get_value("num_list")) != -1)
-                    {
-                        List<string> l_name = new List<string> { "组织名称", "人数" };
-                        List<string> l_type = new List<string> { "TEXT", "INT" };
-                        _ = sqlclass.Create_table("user", l_name, l_type);
-                        List<string> name_list = (from r in dataTable.AsEnumerable() select r.Field<string>(dataTable.Columns[initialization.name_list].Caption)).ToList();
-                        List<string> num_list = (from r in dataTable.AsEnumerable() select r.Field<string>(dataTable.Columns[initialization.num_list].Caption)).ToList();
-
-                        int x = initialization.list_name ? 1 : 0;
-                        List<List<string>> data = new List<List<string>> { };
-                        for (; x < name_list.Count; x++)
-                        {
-                            List<string> a = new List<string> { name_list[x], num_list[x] }; ;
-                            data.Add(a);
-                        }
-                        _ = sqlclass.Insert_table("user", l_name, data);
-                    }
-                    else
-                    {
-                        List<string> l_name = new List<string> { "名称" };
-                        List<string> l_type = new List<string> { "TEXT" };
-                        _ = sqlclass.Create_table("user", l_name, l_type);
-                        List<string> name_list = (from r in dataTable.AsEnumerable() select r.Field<string>(dataTable.Columns[initialization.name_list].Caption)).ToList();
-
-                        int x = initialization.list_name ? 1 : 0;
-                        List<List<string>> data = new List<List<string>> { };
-                        for (; x < name_list.Count; x++)
-                        {
-                            List<string> a = new List<string> { name_list[x] }; ;
-                            data.Add(a);
-                        }
-                        _ = sqlclass.Insert_table("user", l_name, data);
-                    }
-                }
-                else
-                {
-                    MessageWindow message = new MessageWindow("软件数据库存在异常，请准备好您组织的名单，并重新启动软件！");
-                    message.ShowDialog();
-                    System.Windows.Forms.Application.Exit();
-                }
-                //sqlclass.Create_table(string table_name, List<string> list_name, List<string> list_type)
+                MessageWindow message = new MessageWindow("软件数据库存在异常，请准备好您组织的名单，并重新启动软件！");
+                message.ShowDialog();
+                System.Windows.Forms.Application.Exit();
             }
         }
 
