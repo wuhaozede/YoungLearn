@@ -142,42 +142,56 @@ namespace YoungLearn.Initialization
 
         private void WriteSQL()
         {
-            string dbpath = AppDomain.CurrentDomain.BaseDirectory + "\\testDB.db";
-            SQLclass sqlclass = new SQLclass(dbpath);
-
-            DataTable dataTable = Excelclass.RenderDataTableFromExcel(user_Initialization.Excel_path, 0, 0);
-            if (int.Parse(user_Initialization.Get_value("num_list")) != -1)
+            try
             {
-                List<string> l_name = new List<string> { "组织名称", "人数" };
-                List<string> l_type = new List<string> { "TEXT", "INT" };
-                _ = sqlclass.Create_table("user", l_name, l_type);
-                List<string> name_list = (from r in dataTable.AsEnumerable() select r.Field<string>(dataTable.Columns[user_Initialization.name_list].Caption)).ToList();
-                List<string> num_list = (from r in dataTable.AsEnumerable() select r.Field<string>(dataTable.Columns[user_Initialization.num_list].Caption)).ToList();
 
-                int x = user_Initialization.list_name ? 1 : 0;
-                List<List<string>> data = new List<List<string>> { };
-                for (; x < name_list.Count; x++)
+                string dbpath = "testDB.db";
+                SQLclass sqlclass = new SQLclass(dbpath);
+
+                DataTable dataTable = Excelclass.RenderDataTableFromExcel(user_Initialization.Excel_path, 0, 0);
+                if (int.Parse(user_Initialization.Get_value("num_list")) != -1)
                 {
-                    List<string> a = new List<string> { name_list[x], num_list[x] }; ;
-                    data.Add(a);
+                    List<string> l_name = new List<string> { "组织名称", "人数" };
+                    List<string> l_type = new List<string> { "TEXT", "INT" };
+                    _ = sqlclass.Create_table("user", l_name, l_type);
+                    List<string> name_list = (from r in dataTable.AsEnumerable() select r.Field<string>(dataTable.Columns[user_Initialization.name_list].Caption)).ToList();
+                    List<string> num_list = (from r in dataTable.AsEnumerable() select r.Field<string>(dataTable.Columns[user_Initialization.num_list].Caption)).ToList();
+
+                    int x = user_Initialization.list_name ? 1 : 0;
+                    List<List<string>> data = new List<List<string>> { };
+                    for (; x < name_list.Count; x++)
+                    {
+                        List<string> a = new List<string> { name_list[x], num_list[x] }; ;
+                        data.Add(a);
+                    }
+                    _ = sqlclass.Insert_table("user", l_name, data);
                 }
-                _ = sqlclass.Insert_table("user", l_name, data);
+                else
+                {
+                    List<string> l_name = new List<string> { "名称" };
+                    List<string> l_type = new List<string> { "TEXT" };
+                    _ = sqlclass.Create_table("user", l_name, l_type);
+                    List<string> name_list = (from r in dataTable.AsEnumerable() select r.Field<string>(dataTable.Columns[user_Initialization.name_list].Caption)).ToList();
+
+                    int x = user_Initialization.list_name ? 1 : 0;
+                    List<List<string>> data = new List<List<string>> { };
+                    for (; x < name_list.Count; x++)
+                    {
+                        List<string> a = new List<string> { name_list[x] }; ;
+                        data.Add(a);
+                    }
+                    _ = sqlclass.Insert_table("user", l_name, data);
+                }
             }
-            else
+            catch(System.Data.SQLite.SQLiteException ex)
             {
-                List<string> l_name = new List<string> { "名称" };
-                List<string> l_type = new List<string> { "TEXT" };
-                _ = sqlclass.Create_table("user", l_name, l_type);
-                List<string> name_list = (from r in dataTable.AsEnumerable() select r.Field<string>(dataTable.Columns[user_Initialization.name_list].Caption)).ToList();
-
-                int x = user_Initialization.list_name ? 1 : 0;
-                List<List<string>> data = new List<List<string>> { };
-                for (; x < name_list.Count; x++)
-                {
-                    List<string> a = new List<string> { name_list[x] }; ;
-                    data.Add(a);
-                }
-                _ = sqlclass.Insert_table("user", l_name, data);
+                MessageWindow message = new MessageWindow("SQLError:" + ex.Message);
+                message.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageWindow message = new MessageWindow(ex.Message);
+                message.Show();
             }
         }
     }

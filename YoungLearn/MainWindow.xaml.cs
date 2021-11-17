@@ -50,18 +50,27 @@ namespace YoungLearn
                 MessageWindow message = new MessageWindow(initialization.Get_value("all"));
                 _ = message.ShowDialog();
             }
-            Initialization_SQLite();
-            Initialization_YoungLearn();
+            try
+            {
+                Initialization_SQLite();
+                Initialization_YoungLearn();
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
         }
 
         private void Initialization_SQLite()
         {
-            string dbpath = AppDomain.CurrentDomain.BaseDirectory + "\\testDB.db";
+            string dbpath = "testDB.db";
             if (!System.IO.File.Exists(dbpath))
             {
                 MessageWindow message = new MessageWindow("软件数据库存在异常，请准备好您组织的名单，并重新启动软件！");
-                message.ShowDialog();
-                System.Windows.Forms.Application.Exit();
+                message.Show();
+                
+                Initialization.Newyounglearn newyounglearn = new Initialization.Newyounglearn();
+                _ = newyounglearn.ShowDialog();
             }
         }
 
@@ -78,7 +87,7 @@ namespace YoungLearn
             if (int.Parse(initialization.Get_value("num_list")) == -1)
             {
                 DataTable data = DictionaryTools.Dictionary_To_DataTable(httpclass.GetLevel(result));
-                string dbpath = AppDomain.CurrentDomain.BaseDirectory + "\\testDB.db";
+                string dbpath = "testDB.db";
                 SQLclass sqlclass = new SQLclass(dbpath);
                 if (sqlclass.ExistTable(name))
                 {

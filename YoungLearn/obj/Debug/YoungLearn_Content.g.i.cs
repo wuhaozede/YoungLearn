@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resources/q.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x64/sqlite.interop.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("x86/sqlite.interop.dll")]
 
 
