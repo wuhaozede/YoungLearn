@@ -266,15 +266,7 @@ namespace YoungLearn.Utility
         {
             try
             {
-                Type t;
-                if (obj.GetType().IsGenericType)
-                {
-                    t = obj.GetType().GetGenericTypeDefinition();
-                }
-                else
-                {
-                    t = obj.GetType();
-                }
+                Type t = obj.GetType().IsGenericType ? obj.GetType().GetGenericTypeDefinition() : obj.GetType();
                 if (t == typeof(List<>) ||
                     t == typeof(IEnumerable<>))
                 {

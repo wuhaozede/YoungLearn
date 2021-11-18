@@ -19,6 +19,7 @@
                 <ColumnDefinition Width="150" />
             </Grid.ColumnDefinitions>
 
+            <!--本区域为左上角的菜单区域-->
             <Menu Background="Transparent" VerticalAlignment="Center" Height="40">
 
                 <MenuItem Header="工作空间" Click="MenuItem_Click" Height="40" FontSize="20" FontFamily="{DynamicResource {x:Static SystemFonts.CaptionFontFamilyKey}}">
@@ -34,6 +35,7 @@
 
             </Menu>
 
+            <!--本区域为右上角的最小化最大化区域-->
             <StackPanel Grid.Column="2" Orientation="Horizontal" MouseDown="Title_MouseDown" MouseMove="Title_MouseMove">
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -65,6 +67,8 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
+            
+            <!--界面上部-->
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -75,7 +79,25 @@
                         <Chr:Chart x:Name="chart" BackColor="WhiteSmoke"/>
                     </WindowsFormsHost>
                 </Grid>
+                <Grid Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Button Name="Btn_Refresh" Height="60" Margin="20,30,20,0" FontFamily="楷体" FontSize="35" Click="Btn_Refresh_Click">刷新数据</Button>
+                        <Button Name="Btn_Copy" Grid.Row="1" Height="60" Margin="20" FontFamily="楷体" FontSize="35" Click="Btn_Copy_Click">复制提醒</Button>
+                        <Button Name="Btn_Export" Grid.Row="2" Height="60" Margin="20,0,20,30" FontFamily="楷体" FontSize="35" Click="Btn_Export_Click">导出数据</Button>
+                    </Grid>
+                </Grid>
             </Grid>
+
+            <!--界面下部-->
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -87,7 +109,7 @@
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
                     <TextBlock Margin="30,20,10,0" FontSize="28">完成名单：</TextBlock>
-                    <DataGrid Name="GoodLearnDataGrid" Grid.Row="1" Margin="20,0,20,20" AlternationCount="2">
+                    <DataGrid Name="GoodLearnDataGrid" Grid.Row="1" Margin="20,0,20,20" AlternationCount="2" FontFamily="楷体">
                         <DataGrid.RowStyle>
                             <Style TargetType="{x:Type DataGridRow}">
                                 <Setter Property="FontSize" Value="20"/>
@@ -106,7 +128,7 @@
                         <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
                     <TextBlock Margin="30,20,10,0" FontSize="28">未完成名单：</TextBlock>
-                    <DataGrid Name="BadLearnDataGrid" Grid.Row="1" Margin="20,0,20,20" AlternationCount="2">
+                    <DataGrid Name="BadLearnDataGrid" Grid.Row="1" Margin="20,0,20,20" AlternationCount="2" FontFamily="楷体">
                         <DataGrid.RowStyle>
                             <Style TargetType="{x:Type DataGridRow}">
                                 <Setter Property="FontSize" Value="20"/>

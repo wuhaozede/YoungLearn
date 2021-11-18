@@ -96,8 +96,8 @@ namespace YoungLearn.Initialization
             {
                 if (user_Initialization.Get_value())
                 {
-                    MessageWindow message = new MessageWindow(user_Initialization.Get_value("all"));
-                    _ = message.ShowDialog();
+                    //MessageWindow message = new MessageWindow(user_Initialization.Get_value("all"));
+                    //_ = message.ShowDialog();
                     WriteSQL();
                     Close();
                 }

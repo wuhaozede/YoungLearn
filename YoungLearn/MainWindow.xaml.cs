@@ -47,8 +47,8 @@ namespace YoungLearn
             else
             {
                 initialization.Set_value(xmlclass.GetAllValue());
-                MessageWindow message = new MessageWindow(initialization.Get_value("all"));
-                _ = message.ShowDialog();
+                //MessageWindow message = new MessageWindow(initialization.Get_value("all"));
+                //_ = message.ShowDialog();
             }
             try
             {
@@ -218,6 +218,33 @@ namespace YoungLearn
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Btn_Refresh_Click(object sender, RoutedEventArgs e)
+        {
+            Initialization_YoungLearn();
+        }
+
+        private void Btn_Copy_Click(object sender, RoutedEventArgs e)
+        {
+            DataTable data = ((DataView)BadLearnDataGrid.ItemsSource).ToTable();
+            string str_data = "";
+            foreach (DataRow row in data.Rows)
+            {
+                foreach (object str in row.ItemArray)
+                {
+                    str_data += str.ToString() + "\n";
+                }
+            }
+            System.Windows.Forms.Clipboard.SetDataObject(str_data);
+            MessageWindow message = new MessageWindow("已复制");
+            _ = message.ShowDialog();
+        }
+
+        private void Btn_Export_Click(object sender, RoutedEventArgs e)
+        {
+            MessageWindow message = new MessageWindow("暂未开放");
+            _ = message.ShowDialog();
         }
     }
 }
