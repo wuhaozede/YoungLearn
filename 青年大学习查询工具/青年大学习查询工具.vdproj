@@ -165,6 +165,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_77FDD835FC134DDD9E3AC97FE76F18A4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_7999FB4119662666CFE516B9FB45D1F3"
         "OwnerKey" = "8:_9CB672D6461CE6F998B358F818E78347"
         "MsmSig" = "8:_UNDEFINED"
@@ -845,6 +851,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_77FDD835FC134DDD9E3AC97FE76F18A4"
+            {
+            "SourcePath" = "8:..\\YoungLearn\\Resources\\q.ico"
+            "TargetName" = "8:q.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_E8FD4CA09DEA4E7EBC535F0E22C63B05"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7999FB4119662666CFE516B9FB45D1F3"
             {
             "AssemblyRegister" = "3:1"
@@ -1363,7 +1389,7 @@
             "Target" = "8:_F6430E1E47374678A5CC8EF61C5C3F09"
             "Folder" = "8:_FAEC00EC3BFD404A857292D512426BEA"
             "WorkingFolder" = "8:_E8FD4CA09DEA4E7EBC535F0E22C63B05"
-            "Icon" = "8:"
+            "Icon" = "8:_77FDD835FC134DDD9E3AC97FE76F18A4"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_366A600C5E10451E9D3C53AC91BBD89D"
@@ -1377,7 +1403,7 @@
             "Target" = "8:_F6430E1E47374678A5CC8EF61C5C3F09"
             "Folder" = "8:_CFFAEF70C21C423C865F5D7BB207887D"
             "WorkingFolder" = "8:_E8FD4CA09DEA4E7EBC535F0E22C63B05"
-            "Icon" = "8:"
+            "Icon" = "8:_77FDD835FC134DDD9E3AC97FE76F18A4"
             "Feature" = "8:"
             }
         }
