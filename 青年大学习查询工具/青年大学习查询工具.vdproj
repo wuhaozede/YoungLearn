@@ -165,12 +165,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_77FDD835FC134DDD9E3AC97FE76F18A4"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_7999FB4119662666CFE516B9FB45D1F3"
         "OwnerKey" = "8:_9CB672D6461CE6F998B358F818E78347"
         "MsmSig" = "8:_UNDEFINED"
@@ -215,6 +209,12 @@
         {
         "MsmKey" = "8:_7F6AE9287CC406766111628DFF3E2E42"
         "OwnerKey" = "8:_F6430E1E47374678A5CC8EF61C5C3F09"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_8D1C2C1A99014618B9B50FE1B228124E"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -851,26 +851,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_77FDD835FC134DDD9E3AC97FE76F18A4"
-            {
-            "SourcePath" = "8:..\\YoungLearn\\Resources\\q.ico"
-            "TargetName" = "8:q.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_E8FD4CA09DEA4E7EBC535F0E22C63B05"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7999FB4119662666CFE516B9FB45D1F3"
             {
             "AssemblyRegister" = "3:1"
@@ -1013,6 +993,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_8D1C2C1A99014618B9B50FE1B228124E"
+            {
+            "SourcePath" = "8:..\\YoungLearn\\Resources\\q.ico"
+            "TargetName" = "8:q.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_A8097B89070648068A69665CE7503637"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9CB672D6461CE6F998B358F818E78347"
@@ -1228,6 +1228,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_A8097B89070648068A69665CE7503637"
+                    {
+                    "Name" = "8:img"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_F38C9D6CA81544C98618100DAA38AC46"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_FAEC00EC3BFD404A857292D512426BEA"
@@ -1257,15 +1268,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:青年大学习查询工具"
-        "ProductCode" = "8:{7151CFDA-6E69-4C80-BD42-C95F16FC98A0}"
-        "PackageCode" = "8:{88E5A78F-FA48-4EDF-AFFF-422D371FC079}"
+        "ProductCode" = "8:{8B54DDAD-9233-496B-99BE-FEB5BEF3EF11}"
+        "PackageCode" = "8:{0398BFDF-91F3-4D0D-A9C3-0117671F589E}"
         "UpgradeCode" = "8:{DBBA97F6-C32F-42AA-9243-F4D494DD6780}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.1.0"
+        "ProductVersion" = "8:1.1.1"
         "Manufacturer" = "8:wuhaoze"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -1275,7 +1286,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_8D1C2C1A99014618B9B50FE1B228124E"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -1389,7 +1400,7 @@
             "Target" = "8:_F6430E1E47374678A5CC8EF61C5C3F09"
             "Folder" = "8:_FAEC00EC3BFD404A857292D512426BEA"
             "WorkingFolder" = "8:_E8FD4CA09DEA4E7EBC535F0E22C63B05"
-            "Icon" = "8:_77FDD835FC134DDD9E3AC97FE76F18A4"
+            "Icon" = "8:_8D1C2C1A99014618B9B50FE1B228124E"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_366A600C5E10451E9D3C53AC91BBD89D"
@@ -1403,7 +1414,7 @@
             "Target" = "8:_F6430E1E47374678A5CC8EF61C5C3F09"
             "Folder" = "8:_CFFAEF70C21C423C865F5D7BB207887D"
             "WorkingFolder" = "8:_E8FD4CA09DEA4E7EBC535F0E22C63B05"
-            "Icon" = "8:_77FDD835FC134DDD9E3AC97FE76F18A4"
+            "Icon" = "8:_8D1C2C1A99014618B9B50FE1B228124E"
             "Feature" = "8:"
             }
         }
@@ -1805,6 +1816,34 @@
         }
         "ProjectOutput"
         {
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_28BA9B312639429AA7A3652E8F3DB5D6"
+            {
+            "SourcePath" = "8:"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_E8FD4CA09DEA4E7EBC535F0E22C63B05"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:ContentFiles"
+            "OutputProjectGuid" = "8:{988D58FC-5949-4BB8-9FDE-22B54376529A}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_F6430E1E47374678A5CC8EF61C5C3F09"
             {
             "SourcePath" = "8:..\\YoungLearn\\obj\\Debug\\YoungLearn.exe"

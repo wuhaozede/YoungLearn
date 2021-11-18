@@ -73,4 +73,3 @@ C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\bin\Debug\System.Data.SQLite
 C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\bin\Debug\System.Data.SQLite.EF6.xml
 C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\bin\Debug\System.Data.SQLite.Linq.pdb
 C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\bin\Debug\System.Data.SQLite.Linq.xml
-C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\obj\Debug\YoungLearn.csproj.AssemblyReference.cache
