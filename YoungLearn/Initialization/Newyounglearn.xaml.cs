@@ -144,11 +144,24 @@ namespace YoungLearn.Initialization
         {
             try
             {
-
                 string dbpath = "testDB.db";
                 SQLclass sqlclass = new SQLclass(dbpath);
 
-                DataTable dataTable = Excelclass.RenderDataTableFromExcel(user_Initialization.Excel_path, 0, 0);
+                DataTable dataTable = new DataTable();
+                if (".xls" == System.IO.Path.GetExtension(user_Initialization.Excel_path))
+                {
+                    dataTable = Excelclass.RenderDataTableFromExcel(user_Initialization.Excel_path, 0, 0);
+                }
+                else if (".xlsx" == System.IO.Path.GetExtension(user_Initialization.Excel_path))
+                {
+                    dataTable = Excelxclass.Readxlsx(user_Initialization.Excel_path);
+                }
+                else
+                {
+                    MessageWindow message = new MessageWindow("导入表格错误");
+                    message.ShowDialog();
+                }
+
                 if (int.Parse(user_Initialization.Get_value("num_list")) != -1)
                 {
                     List<string> l_name = new List<string> { "组织名称", "人数" };

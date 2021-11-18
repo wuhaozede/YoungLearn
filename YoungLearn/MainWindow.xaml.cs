@@ -67,8 +67,8 @@ namespace YoungLearn
             if (!System.IO.File.Exists(dbpath))
             {
                 MessageWindow message = new MessageWindow("软件数据库存在异常，请准备好您组织的名单，并重新启动软件！");
-                message.Show();
-                
+                _ = message.ShowDialog();
+
                 Initialization.Newyounglearn newyounglearn = new Initialization.Newyounglearn();
                 _ = newyounglearn.ShowDialog();
             }

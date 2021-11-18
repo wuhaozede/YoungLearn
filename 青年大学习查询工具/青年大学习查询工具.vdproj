@@ -1220,7 +1220,7 @@
             }
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_E8FD4CA09DEA4E7EBC535F0E22C63B05"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFilesFolder]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -1269,7 +1269,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:青年大学习查询工具"
         "ProductCode" = "8:{8B54DDAD-9233-496B-99BE-FEB5BEF3EF11}"
-        "PackageCode" = "8:{0398BFDF-91F3-4D0D-A9C3-0117671F589E}"
+        "PackageCode" = "8:{F7FDC48D-BE6B-4D8E-8FD5-38ACB5516C33}"
         "UpgradeCode" = "8:{DBBA97F6-C32F-42AA-9243-F4D494DD6780}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1277,7 +1277,7 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.1.1"
-        "Manufacturer" = "8:wuhaoze"
+        "Manufacturer" = "8:YoungLearn"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:青年大学习查询工具"

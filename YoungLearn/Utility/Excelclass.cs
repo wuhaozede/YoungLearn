@@ -1,4 +1,5 @@
-﻿using NPOI.HPSF;
+﻿using ClosedXML.Excel;
+using NPOI.HPSF;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using System;
@@ -791,6 +792,64 @@ namespace YoungLearn.Utility
             }
             #endregion
             return table;
+        }
+    }
+
+    class Excelxclass
+    {
+        /// <summary>
+        /// 读取xlsx文件
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static DataTable Readxlsx(string path)
+        {
+            DataTable data = new DataTable();
+
+            using (XLWorkbook wb = new XLWorkbook(path))//FilePath
+            {
+                IXLWorksheet workSheet = wb.Worksheet(1);
+
+                //Loop through the Worksheet rows.
+                bool firstRow = true;
+                foreach (IXLRow row in workSheet.Rows())
+                {
+                    //Use the first row to add columns to DataTable.
+                    if (firstRow)
+                    {
+                        foreach (IXLCell cell in row.Cells())
+                        {
+                            data.Columns.Add(cell.Value.ToString());
+                        }
+                        firstRow = false;
+                    }
+                    else
+                    {
+                        //Add rows to DataTable.
+                        data.Rows.Add();
+                        int i = 0;
+                        foreach (IXLCell cell in row.Cells())
+                        {
+                            data.Rows[data.Rows.Count - 1][i] = cell.Value.ToString();
+                            i++;
+                        }
+                    }
+                }
+            }
+            return data;
+        }
+
+        /// <summary>
+        /// 写入xlsx文件
+        /// </summary>
+        /// <param name="path">保存路径</param>
+        /// <param name="data">需要保存的datatable</param>
+        /// <param name="WorksheetName">保存的表名称</param>
+        public static void Writexlsx(string path, DataTable data, string WorksheetName= "WorksheetName")
+        {
+            XLWorkbook wb = new XLWorkbook();
+            wb.Worksheets.Add(data, WorksheetName);
+            wb.SaveAs(path);
         }
     }
 }

@@ -93,10 +93,26 @@ namespace YoungLearn.Initialization
 
         private void Get_excel()
         {
-            DataTable dataTable = Excelclass.RenderDataTableFromExcel(System.IO.Path.GetFullPath(user_Initialization.Excel_path), 0, 0);
-
+            string path = System.IO.Path.GetFullPath(user_Initialization.Excel_path);
+            DataTable dataTable = new DataTable();
+            if (".xls" == System.IO.Path.GetExtension(path))
+            {
+                dataTable = Excelclass.RenderDataTableFromExcel(path, 0, 0);
+            }
+            else if(".xlsx" == System.IO.Path.GetExtension(path))
+            {
+                dataTable = Excelxclass.Readxlsx(path);
+            }
+            else
+            {
+                MessageWindow message = new MessageWindow("导入表格错误");
+                message.ShowDialog();
+                
+            }
+            
             combobox_name.Items.Clear();
             combobox_num.Items.Clear();
+
             foreach (DataColumn data in dataTable.Columns)
             {
                 string str = data.Caption.ToString();
