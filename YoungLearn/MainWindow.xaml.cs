@@ -66,11 +66,89 @@ namespace YoungLearn
             string dbpath = "testDB.db";
             if (!System.IO.File.Exists(dbpath))
             {
-                MessageWindow message = new MessageWindow("软件数据库存在异常，请准备好您组织的名单，并重新启动软件！");
-                _ = message.ShowDialog();
+                if (System.IO.File.Exists(initialization.Excel_path))
+                {
+                    WriteSQL();
+                }
+                else
+                {
+                    MessageWindow message = new MessageWindow("软件数据库存在异常，请准备好您组织的名单，并重新启动软件！");
+                    _ = message.ShowDialog();
 
-                Initialization.Newyounglearn newyounglearn = new Initialization.Newyounglearn();
-                _ = newyounglearn.ShowDialog();
+                    Initialization.Newyounglearn newyounglearn = new Initialization.Newyounglearn();
+                    _ = newyounglearn.ShowDialog();
+                }
+            }
+        }
+
+        /// <summary>
+        /// 写入sql
+        /// </summary>
+        private void WriteSQL()
+        {
+            try
+            {
+                string dbpath = "testDB.db";
+                SQLclass sqlclass = new SQLclass(dbpath);
+
+                DataTable dataTable = new DataTable();
+                if (".xls" == System.IO.Path.GetExtension(initialization.Excel_path))
+                {
+                    dataTable = Excelclass.RenderDataTableFromExcel(initialization.Excel_path, 0, 0);
+                }
+                else if (".xlsx" == System.IO.Path.GetExtension(initialization.Excel_path))
+                {
+                    dataTable = Excelxclass.Readxlsx(initialization.Excel_path);
+                }
+                else
+                {
+                    MessageWindow message = new MessageWindow("导入表格错误");
+                    _ = message.ShowDialog();
+                }
+
+                if (int.Parse(initialization.Get_value("num_list")) != -1)
+                {
+                    List<string> l_name = new List<string> { "组织名称", "人数" };
+                    List<string> l_type = new List<string> { "TEXT", "INT" };
+                    _ = sqlclass.Create_table("user", l_name, l_type);
+                    List<string> name_list = (from r in dataTable.AsEnumerable() select r.Field<string>(dataTable.Columns[initialization.name_list].Caption)).ToList();
+                    List<string> num_list = (from r in dataTable.AsEnumerable() select r.Field<string>(dataTable.Columns[initialization.num_list].Caption)).ToList();
+
+                    int x = initialization.list_name ? 1 : 0;
+                    List<List<string>> data = new List<List<string>> { };
+                    for (; x < name_list.Count; x++)
+                    {
+                        List<string> a = new List<string> { name_list[x], num_list[x] }; ;
+                        data.Add(a);
+                    }
+                    _ = sqlclass.Insert_table("user", l_name, data);
+                }
+                else
+                {
+                    List<string> l_name = new List<string> { "名称" };
+                    List<string> l_type = new List<string> { "TEXT" };
+                    _ = sqlclass.Create_table("user", l_name, l_type);
+                    List<string> name_list = (from r in dataTable.AsEnumerable() select r.Field<string>(dataTable.Columns[initialization.name_list].Caption)).ToList();
+
+                    int x = initialization.list_name ? 1 : 0;
+                    List<List<string>> data = new List<List<string>> { };
+                    for (; x < name_list.Count; x++)
+                    {
+                        List<string> a = new List<string> { name_list[x] }; ;
+                        data.Add(a);
+                    }
+                    _ = sqlclass.Insert_table("user", l_name, data);
+                }
+            }
+            catch (System.Data.SQLite.SQLiteException ex)
+            {
+                MessageWindow message = new MessageWindow("SQLError:" + ex.Message);
+                message.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageWindow message = new MessageWindow(ex.Message);
+                message.Show();
             }
         }
 
