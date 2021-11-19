@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_0478EB4EA393C7FEF4682E796C06CC14"
-        "OwnerKey" = "8:_F6430E1E47374678A5CC8EF61C5C3F09"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_07F64A8DD7DF6467C625FC78F26EE93D"
         "OwnerKey" = "8:_7F6AE9287CC406766111628DFF3E2E42"
         "MsmSig" = "8:_UNDEFINED"
@@ -100,6 +94,12 @@
         "Entry"
         {
         "MsmKey" = "8:_53A271A63E230714CFE18A323C102DDA"
+        "OwnerKey" = "8:_A29C7927CCCFD55178FF331315B80025"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_53A271A63E230714CFE18A323C102DDA"
         "OwnerKey" = "8:_F6430E1E47374678A5CC8EF61C5C3F09"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -117,8 +117,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_53A271A63E230714CFE18A323C102DDA"
-        "OwnerKey" = "8:_A29C7927CCCFD55178FF331315B80025"
+        "MsmKey" = "8:_5D385320DF60A3131F9379AF9457DBBE"
+        "OwnerKey" = "8:_F6430E1E47374678A5CC8EF61C5C3F09"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -273,13 +273,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_D0BDB698F5D6A888F755E416D1951AF4"
+        "MsmKey" = "8:_A38E8E30798F5607E3B098612197A0A6"
         "OwnerKey" = "8:_F6430E1E47374678A5CC8EF61C5C3F09"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_E1658D716C0503DCF3341255513B77EC"
+        "MsmKey" = "8:_D0BDB698F5D6A888F755E416D1951AF4"
         "OwnerKey" = "8:_F6430E1E47374678A5CC8EF61C5C3F09"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -346,7 +346,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_53A271A63E230714CFE18A323C102DDA"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_F9AD8E3D4138B9970462695135A2BA4C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_630D3903735D5199D521224A653D401B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -365,18 +377,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_3CE25DC7AB10449B4E0E1E550ABE687B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_53A271A63E230714CFE18A323C102DDA"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_630D3903735D5199D521224A653D401B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -454,13 +454,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E1658D716C0503DCF3341255513B77EC"
+        "OwnerKey" = "8:_5D385320DF60A3131F9379AF9457DBBE"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_0478EB4EA393C7FEF4682E796C06CC14"
+        "OwnerKey" = "8:_A38E8E30798F5607E3B098612197A0A6"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -558,37 +558,6 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0478EB4EA393C7FEF4682E796C06CC14"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:PresentationFramework.Aero2, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
-                "ScatterAssemblies"
-                {
-                    "_0478EB4EA393C7FEF4682E796C06CC14"
-                    {
-                    "Name" = "8:PresentationFramework.Aero2.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:PresentationFramework.Aero2.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_E8FD4CA09DEA4E7EBC535F0E22C63B05"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_07F64A8DD7DF6467C625FC78F26EE93D"
             {
             "AssemblyRegister" = "3:1"
@@ -720,11 +689,6 @@
             "AssemblyAsmDisplayName" = "8:DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_3CE25DC7AB10449B4E0E1E550ABE687B"
-                    {
-                    "Name" = "8:DocumentFormat.OpenXml.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:DocumentFormat.OpenXml.dll"
             "TargetName" = "8:"
@@ -789,6 +753,37 @@
                     }
                 }
             "SourcePath" = "8:ICSharpCode.SharpZipLib.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_E8FD4CA09DEA4E7EBC535F0E22C63B05"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5D385320DF60A3131F9379AF9457DBBE"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+                "ScatterAssemblies"
+                {
+                    "_5D385320DF60A3131F9379AF9457DBBE"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E8FD4CA09DEA4E7EBC535F0E22C63B05"
@@ -906,11 +901,6 @@
             "AssemblyAsmDisplayName" = "8:ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_67C6C6C7603BD2B4C96A05AF051EC650"
-                    {
-                    "Name" = "8:ExcelNumberFormat.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:ExcelNumberFormat.dll"
             "TargetName" = "8:"
@@ -1218,20 +1208,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D0BDB698F5D6A888F755E416D1951AF4"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A38E8E30798F5607E3B098612197A0A6"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:PresentationFramework.Aero2, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"
                 "ScatterAssemblies"
                 {
-                    "_D0BDB698F5D6A888F755E416D1951AF4"
+                    "_A38E8E30798F5607E3B098612197A0A6"
                     {
-                    "Name" = "8:Newtonsoft.Json.dll"
+                    "Name" = "8:PresentationFramework.Aero2.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:Newtonsoft.Json.dll"
+            "SourcePath" = "8:PresentationFramework.Aero2.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E8FD4CA09DEA4E7EBC535F0E22C63B05"
@@ -1249,20 +1239,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E1658D716C0503DCF3341255513B77EC"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D0BDB698F5D6A888F755E416D1951AF4"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+            "AssemblyAsmDisplayName" = "8:Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_E1658D716C0503DCF3341255513B77EC"
+                    "_D0BDB698F5D6A888F755E416D1951AF4"
                     {
-                    "Name" = "8:System.Net.Http.dll"
+                    "Name" = "8:Newtonsoft.Json.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:System.Net.Http.dll"
+            "SourcePath" = "8:Newtonsoft.Json.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E8FD4CA09DEA4E7EBC535F0E22C63B05"
@@ -1318,11 +1308,6 @@
             "AssemblyAsmDisplayName" = "8:BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_F9AD8E3D4138B9970462695135A2BA4C"
-                    {
-                    "Name" = "8:BouncyCastle.Crypto.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:BouncyCastle.Crypto.dll"
             "TargetName" = "8:"
@@ -1409,15 +1394,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:青年大学习查询工具"
-        "ProductCode" = "8:{ADE09E93-8926-4414-83A1-947C90C823B9}"
-        "PackageCode" = "8:{4DE87293-1238-4615-951C-1DFEC02F419E}"
+        "ProductCode" = "8:{5A963790-2A9B-4F17-AEC6-B4B14CC16A0F}"
+        "PackageCode" = "8:{F13053B3-7052-49AD-B355-A7F9AAF516B7}"
         "UpgradeCode" = "8:{DBBA97F6-C32F-42AA-9243-F4D494DD6780}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.1.2"
+        "ProductVersion" = "8:1.1.3"
         "Manufacturer" = "8:YoungLearn"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

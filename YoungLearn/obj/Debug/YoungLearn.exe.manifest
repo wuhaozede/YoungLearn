@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Resources\q.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="YoungLearn" version="1.1.2.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="YoungLearn" version="1.1.3.12" language="neutral" processorArchitecture="msil" />
     <commandLine file="YoungLearn.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BouncyCastle.Crypto.dll" size="2918960">
-      <assemblyIdentity name="BouncyCastle.Crypto" version="1.8.9.0" publicKeyToken="0E99375E54769942" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BouncyCastle.Crypto.dll" size="3316968">
+      <assemblyIdentity name="BouncyCastle.Crypto" version="1.9.0.0" publicKeyToken="0E99375E54769942" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>C9X9xPQ4/6Tq1MyLOg0ywCpD8IVadXJLJCzzVHZQOs4=</dsig:DigestValue>
+        <dsig:DigestValue>5Rch3AZH9IOLGrxZK9lf2MuSRxbopk+D1LlHgh+h+kI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -79,14 +79,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DocumentFormat.OpenXml.dll" size="5697312">
-      <assemblyIdentity name="DocumentFormat.OpenXml" version="2.7.2.0" publicKeyToken="8FB06CB64D019A17" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="DocumentFormat.OpenXml.dll" size="5901176">
+      <assemblyIdentity name="DocumentFormat.OpenXml" version="2.14.0.0" publicKeyToken="8FB06CB64D019A17" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>IRwCMdm66VVATprAWn/gPXhMM2XvWZwHAStC0A7bL9U=</dsig:DigestValue>
+        <dsig:DigestValue>7FyqV0gL6qegozwlei31AFlrJ8ZFFeVtDiTotuNYoJY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -127,14 +127,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ExcelNumberFormat.dll" size="28160">
-      <assemblyIdentity name="ExcelNumberFormat" version="1.0.10.0" publicKeyToken="23C6F5D73BE07ECA" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ExcelNumberFormat.dll" size="30208">
+      <assemblyIdentity name="ExcelNumberFormat" version="1.1.0.0" publicKeyToken="23C6F5D73BE07ECA" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>J2gCiGcsqPn4/MoBGNMvcNAHOUBV8X5lI5SZyVuAOw0=</dsig:DigestValue>
+        <dsig:DigestValue>A8zHGkKDMQLvVK6ezznZ1iwEkcFzWao30dLvDsc5fQQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -307,33 +307,33 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YoungLearn.exe" size="990704">
-      <assemblyIdentity name="YoungLearn" version="1.1.2.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="YoungLearn.exe" size="966640">
+      <assemblyIdentity name="YoungLearn" version="1.1.3.12" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>davziHzT4hmqac5j4LTnmFES3en3uTqg7ki8EkT+izs=</dsig:DigestValue>
+        <dsig:DigestValue>MCQvG2BGSFeH3oLplj6SF09EJ4t3yH1ZSGknmQA/5dw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Resources\q.ico" size="287034">
+  <file name="Resources\q.ico" size="278834">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/iF9V+OdkTYjVxk/t/InRSUzQJ29DZM9571xljtJ9uw=</dsig:DigestValue>
+      <dsig:DigestValue>mXjtRszVv4HuICx7oX3V8vQ26WkIsC7OPKnMLQa8LYE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="YoungLearn.exe.config" size="1896">
+  <file name="YoungLearn.exe.config" size="2628">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>0g7FhltnLuWSydvXNFYpxpXcW5ddBAxaeKxCEPLqNqo=</dsig:DigestValue>
+      <dsig:DigestValue>WvzLcZPeKk9Fj7FT5673BrZbJtA90EwAczOp8//tR+k=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

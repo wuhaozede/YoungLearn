@@ -88,4 +88,3 @@ C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\bin\Debug\NPOI.pdb
 C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\bin\Debug\NPOI.OOXML.pdb
 C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\bin\Debug\NPOI.OpenXml4Net.pdb
 C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\bin\Debug\NPOI.OpenXmlFormats.pdb
-C:\Users\wuhaoze\source\repos\YoungLearn\YoungLearn\obj\Debug\YoungLearn.csproj.AssemblyReference.cache
